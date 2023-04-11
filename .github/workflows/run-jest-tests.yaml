@@ -8,7 +8,7 @@ on:
 
 # jobs to run
 jobs:
-  # build a server to create and auto configure
+  # build, the name of the job, a server to create and auto configure
   build:
 
     runs-on: ubuntu-latest
@@ -17,7 +17,7 @@ jobs:
       # only testing on Node 18 now but could have done
       # several builds by adding [16.x, 18.x] etc
       matrix:
-        node-version: [2.x,16.x, 18.x]
+        node-version: [16.x, 18.x]
 
     steps:
       # action from github marketplace, actions
