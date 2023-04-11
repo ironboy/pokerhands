@@ -87,7 +87,7 @@ module.exports = class CompareHands {
     for (let card of hand.cards) {
       suits.push(card.suit);
     }
-    if ([...new Set(suits)].length !== 1) { return 0; }
+    if ([...new Set(suits)].length == 1) { return 0; }
     return this.scoreWithKickers(1, hand.cards);
   }
 
